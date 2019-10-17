@@ -27,23 +27,26 @@ public class TrackController {
     @PostMapping("track")
     public ResponseEntity<?> saveUser(@RequestBody Track track)
     {
+        System.out.println("---------- new code");
+
         ResponseEntity responseEntity;
-        try {
+//        try {
 //            userService.saveUser(user);
             trackservice.saveTrack(track);
 
             responseEntity=new ResponseEntity<String>("successfully created", HttpStatus.ACCEPTED);
             return responseEntity;
 
-        }
-        catch(Exception e)
-        {
-
-            responseEntity=new ResponseEntity<String>(e.getMessage(), HttpStatus.ACCEPTED);
-        }
-        return responseEntity;
+//        }
+//        catch(TrackAlreadyExitsException e)
+//        {
+//
+//            responseEntity=new ResponseEntity<String>(e.getMessage(), HttpStatus.ACCEPTED);
+//        }
+//        return responseEntity;
 
     }
+
 //    @PostMapping("delete")
     @DeleteMapping("track")
     public ResponseEntity<?> deleteTrack(@RequestBody Track track)
@@ -57,7 +60,7 @@ public class TrackController {
             return responseEntity;
 
         }
-        catch(TrackAlreadyExitsException e)
+        catch(Exception e)
         {
 
             responseEntity=new ResponseEntity<String>(e.getMessage(), HttpStatus.ACCEPTED);

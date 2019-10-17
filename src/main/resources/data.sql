@@ -1,0 +1,1 @@
+INSERT into Track values(1,'ajat','direction','fifa');

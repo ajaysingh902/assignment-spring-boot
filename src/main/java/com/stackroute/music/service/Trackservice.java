@@ -19,13 +19,11 @@ public class Trackservice {
         if(trackRepository.existsById(track.getId()))
         {
             throw new TrackAlreadyExitsException("Track already exists exception");
-
         }
         Track savedTrack=trackRepository.save(track);
         if(savedTrack==null)
         {
             throw new TrackAlreadyExitsException("Track already exists exception");
-
         }
         return savedTrack;
     }
