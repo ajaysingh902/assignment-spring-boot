@@ -35,12 +35,12 @@ public class Trackservice {
     {
         trackRepository.delete(track);
     }
-    public Track getTrackById(int i)
-    {
-
-        Track track=trackRepository.findbytrackid(i);
-        return  track;
-    }
+//    public Track getTrackById(int i)
+//    {
+//
+//        Track track=trackRepository.findbytrackid(i);
+//        return  track;
+//    }
 
 
 }

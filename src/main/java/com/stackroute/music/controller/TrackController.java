@@ -15,7 +15,7 @@ import java.util.List;
 public class TrackController {
 //    private UserService userService;
     private Trackservice trackservice;
-
+    @Autowired
     public TrackController(Trackservice trackservice) {
         this.trackservice = trackservice;
     }
@@ -73,9 +73,9 @@ public class TrackController {
     {
         return new ResponseEntity<List<Track>>(trackservice.getTrack(),HttpStatus.OK);
     }
-    @GetMapping("/getname")
-    public ResponseEntity<?> getTrackById(@RequestParam int i)
-    {
-        return new ResponseEntity<Track>(trackservice.getTrackById(i),HttpStatus.OK);
-    }
+//    @GetMapping("/getname")
+//    public ResponseEntity<?> getTrackById(@RequestParam int i)
+//    {
+//        return new ResponseEntity<Track>(trackservice.getTrackById(i),HttpStatus.OK);
+//    }
 }
